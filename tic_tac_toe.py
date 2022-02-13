@@ -89,7 +89,7 @@ def play_again():
         elif go_agane in ('N', 'NO', 'NAH', 'NOPE'):
             valid_answer = True
             print("Thank you for playing :)")
-            time.sleep(10)
+            time.sleep(1)
             break
         else:
             valid_answer = False
