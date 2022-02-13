@@ -115,7 +115,7 @@ def you_lost(loser,winner):
     '''
     Message to the loser.
     '''
-    print(f"You suck {loser}. {winner} just spanked you at War.")
+    print(f"You lost, {loser}. {winner} just defeated you at War.")
     print(f"This game lasted {ROUND_NUMBER} turns.")
 
 # What has been pulled
@@ -123,12 +123,13 @@ def on_the_table():
     '''
     Shows what has been pulled by each player for that turn.
     Uncomment these sleeps to make the game more readable.
+    Comment these sleeps to make the game play faster.
     '''
-    #time.sleep(.5)
+    time.sleep(.5)
     print(f"{player_one.name} has pulled the {player_one_cip[-1]}!")
-    #time.sleep(.5)
+    time.sleep(.5)
     print(f"{player_two.name} has pulled the {player_two_cip[-1]}!")
-    #time.sleep(.5)
+    time.sleep(.5)
 
 
 # GAME LOGIC
@@ -163,6 +164,7 @@ while GAME_ON:
     print(f"It is now round {ROUND_NUMBER}")
 
     if ROUND_NUMBER % 10 == 0:
+        # This will pause every 10 rounds. Useful when simulating fast games. 
         print("\nWhew, let's take a break...")
         time.sleep(2)
         print(player_one)
